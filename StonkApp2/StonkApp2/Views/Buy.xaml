@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StonkApp2.Views.Buy">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding UserBalance}"/>
+            <Entry x:Name="PriceEntry" Placeholder="Stock Symbol" Text="{Binding StockText}" ReturnCommand="{Binding GetPrice}"
+                 />
+            <Label Text="Share Price:"/>
+            <Label Text="{Binding SharePrice}"/>
+            <Entry x:Name="CountEntry" Placeholder="Number Of Shares to Buy" Text="{Binding NumberOfShares}" ReturnCommand="{Binding Buy}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StonkApp2.Views.Sell"
+             xmlns:vm="clr-namespace:StonksApp2.ViewModels">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Your Balance is" />
+            <Label Text="{Binding UserBalance}"></Label>
+
+           <!-- <ListView x:Name="{Binding ShownStocksView}"/> -->
+            <ListView ItemsSource="{Binding ShownStocks}"/>
+            <Entry x:Name="PriceEntry" Placeholder="Stock Symbol" Text="{Binding StockText}" />
+            <Entry x:Name="CountEntry" Placeholder="Number Of Shares to Sell" Text="{Binding NumberOfShares}" ReturnCommand="{Binding Sell}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

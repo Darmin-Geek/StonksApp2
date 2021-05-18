@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StonksApp2.Views.Home">
+  <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Your Balance: " />
+            <Label Text="{Binding UserBalance}"></Label>
+            <Button x:Name="GoToBuyBtn" Text="Go to Buy/Info" Command="{Binding GoToBuy}"></Button>
+    <Button x:Name="GoToBuySell" Text="Go to Sell/Portfolio" Command="{Binding GoToSell}"></Button> 
+        </StackLayout>
+   </ContentPage.Content>
+</ContentPage>
